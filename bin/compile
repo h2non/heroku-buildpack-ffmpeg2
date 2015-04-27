@@ -14,7 +14,8 @@ VENDOR_DIR="vendor"
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 
-source ./lib/build.sh
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+. $(DIR)/../lib/build.sh
 #cd $VENDOR_DIR
 #curl -L --silent $DOWNLOAD_URL | tar xz
 
