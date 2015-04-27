@@ -14,8 +14,8 @@ echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-. $(DIR)/../lib/build.sh
+#DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+#. $(DIR)/../lib/build.sh
 mkdir -p $VENDOR_DIR/ffmpeg
 cd $VENDOR_DIR/ffmpeg
 curl -L --silent $DOWNLOAD_URL | tar xz
