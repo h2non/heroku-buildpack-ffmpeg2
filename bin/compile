@@ -15,7 +15,7 @@ mkdir -p $VENDOR_DIR
 echo "Downloading libvips: " $DOWNLOAD_URL | indent
 mkdir -p $VENDOR_DIR/ffmpeg
 cd $VENDOR_DIR/ffmpeg
-curl -L --silent $DOWNLOAD_URL | tar xz
+curl -L --silent $DOWNLOAD_URL | tar xJf
 
 echo "List directory..."
 ls $VENDOR_DIR/ffmpeg
