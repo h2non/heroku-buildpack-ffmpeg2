@@ -9,13 +9,10 @@ BUILD_DIR=$1
 VENDOR_DIR="vendor"
 DOWNLOAD_URL="http://johnvansickle.com/ffmpeg/builds/ffmpeg-git-32bit-static.tar.xz"
 
-echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
-
 cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 
-#DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-#. $(DIR)/../lib/build.sh
+echo "Downloading libvips: " $DOWNLOAD_URL | indent
 mkdir -p $VENDOR_DIR/ffmpeg
 cd $VENDOR_DIR/ffmpeg
 curl -L --silent $DOWNLOAD_URL | tar xz
